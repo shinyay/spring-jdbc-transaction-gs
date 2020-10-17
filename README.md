@@ -1,6 +1,6 @@
 # Spring Data JDBC with Transaction Management
 
-Overview
+Without JDBC Code, Spring Data JDBC makes it to manage Transactional operation
 
 ## Description
 
