@@ -1,4 +1,4 @@
-# Name
+# Spring Data JDBC with Transaction Management
 
 Overview
 
