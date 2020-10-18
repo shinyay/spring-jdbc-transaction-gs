@@ -16,6 +16,9 @@ for (person in persons) {
 }
 ```
 
+### @Transactional
+Transactional annotation enables the operation to roll back.
+
 ## Demo
 
 ## Features
