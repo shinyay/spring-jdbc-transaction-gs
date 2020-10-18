@@ -4,8 +4,10 @@ Without JDBC Code, Spring Data JDBC makes it to manage Transactional operation
 
 ## Description
 ### Dependencies
-- `org.springframework.boot:spring-boot-starter-data-jdbc`
-
+- **Spring Data JDBC**
+  - `org.springframework.boot:spring-boot-starter-data-jdbc`
+- H2 Database (for Testing)
+  - `com.h2database:h2`
 ## Demo
 
 ## Features
