@@ -3,6 +3,8 @@
 Without JDBC Code, Spring Data JDBC makes it to manage Transactional operation
 
 ## Description
+### Dependencies
+- `org.springframework.boot:spring-boot-starter-data-jdbc`
 
 ## Demo
 
