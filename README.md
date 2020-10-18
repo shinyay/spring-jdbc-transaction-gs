@@ -19,6 +19,14 @@ for (person in persons) {
 ### @Transactional
 Transactional annotation enables the operation to roll back.
 
+### Schema SQL
+- `src/main/resources/schema.sql`
+
+```sql
+drop table BOOKINGS if exists;
+create table BOOKINGS(ID serial, FIRST_NAME varchar(5) NOT NULL);
+```
+
 ## Demo
 
 ## Features
