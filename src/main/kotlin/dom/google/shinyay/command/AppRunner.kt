@@ -13,13 +13,19 @@ class AppRunner(val bookingService: BookingService) : CommandLineRunner {
         Assert.isTrue(bookingService.showAllBookings()!!.size == 3,
                 "First booking should work with no problem")
         logger.info("Alice, Bob and Carol have been booked")
+
+        bookButException()
+
+        queryBookedPerson()
+    }
+
+    private fun bookButException() {
         try {
             bookingService.book("Chris", "Charlie")
         } catch (e: RuntimeException) {
             logger.info("[The following exception is expect the person is too big for the DB]")
             logger.error(e.message)
         }
-        queryBookedPerson()
     }
 
     private fun queryBookedPerson() {
