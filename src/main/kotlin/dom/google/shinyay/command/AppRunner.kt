@@ -19,5 +19,12 @@ class AppRunner(val bookingService: BookingService) : CommandLineRunner {
             logger.info("[The following exception is expect the person is too big for the DB]")
             logger.error(e.message)
         }
+        queryBookedPerson()
+    }
+
+    private fun queryBookedPerson() {
+        for (person in bookingService.showAllBookings()!!) {
+            logger.info("So far, $person is booked.")
+        }
     }
 }
