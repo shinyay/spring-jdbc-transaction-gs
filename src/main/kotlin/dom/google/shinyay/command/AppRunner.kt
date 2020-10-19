@@ -9,16 +9,19 @@ import org.springframework.util.Assert
 @Component
 class AppRunner(val bookingService: BookingService) : CommandLineRunner {
     override fun run(vararg args: String?) {
-        bookingService.book("Alice", "Bob", "Carol")
-        Assert.isTrue(bookingService.showAllBookings()!!.size == 3,
-                "First booking should work with no problem")
-        logger.info("Alice, Bob and Carol have been booked")
+        bookMultiplePerson()
 
         bookButException()
 
         queryBookedPerson()
     }
 
+    private fun bookMultiplePerson() {
+        bookingService.book("Alice", "Bob", "Carol")
+        Assert.isTrue(bookingService.showAllBookings()!!.size == 3,
+                "First booking should work with no problem")
+        logger.info("Alice, Bob and Carol have been booked")
+    }
     private fun bookButException() {
         try {
             bookingService.book("Chris", "Charlie")
