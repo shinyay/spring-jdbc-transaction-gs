@@ -37,6 +37,7 @@ class AppRunner(val bookingService: BookingService) : CommandLineRunner {
         }
         if(bookingService.showAllBookings()!!.size == 3) {
             logger.info("2nd booking has been rolled back")
+            logger.info("Chris and Charlie are in same Transaction")
         }
     }
 
